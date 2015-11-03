@@ -8,8 +8,12 @@
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
+# Start wifi
 exec --no-startup-id nm-applet
-exec ~/.fehbg
+
+# Set background
+exec /home/kgd/.fehbg
+
 set $mod Mod1
 
 # font for window titles. ISO 10646 = Unicode
@@ -30,6 +34,12 @@ bindsym $mod+g exec google-chrome
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2%+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 2%- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
+
+# Assign Mod4 to the Microsoft key
+set $ms Mod4
+
+bindsym $ms+t exec setxkbmap tr
+bindsym $ms+u exec setxkbmap us
 
 #### Custom End ####
 
