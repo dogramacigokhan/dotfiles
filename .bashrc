@@ -85,9 +85,9 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -109,8 +109,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+alias naut='nautilus --no-desktop'
+
 setxkbmap -option caps:escape
-source "git-completion.bash"
+export LANG=en_US.UTF-8
 
 source /etc/profile
 export PS1="\n\$(if [[ \$? == 0 ]]; then echo \"\[\033[0;32m\]\"; else echo \"\[\033[0;31m\]\"; fi)[ \t ][ \W ] \n\[\033[0m\]# "

@@ -18,10 +18,10 @@ endif
 colorscheme delek
 syntax on
 set nu
-filetype plugin indent on
-set tabstop=2
-set shiftwidth=2
-set expandtab
+set tabstop=4
+set shiftwidth=4
+" filetype plugin indent on
+" set expandtab
 
 noremap ' i
 noremap i k
