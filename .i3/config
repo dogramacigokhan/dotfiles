@@ -17,7 +17,7 @@ exec /home/kgd/.fehbg
 set $mod Mod1
 
 # font for window titles. ISO 10646 = Unicode
-font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font -misc-fixed-medium-r-normal--13-140-75-75-C-70-iso10646-1
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -29,6 +29,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 
 # start google chrome
 bindsym $mod+g exec google-chrome
+bindsym $mod+p exec "google-chrome '--proxy-server=proxy:10245'"
 
 # volume up, down, mute
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2%+ unmute
@@ -43,7 +44,7 @@ bindsym $ms+t exec setxkbmap tr
 bindsym $ms+u exec setxkbmap us
 
 # Auto lock screen
-exec xautolock -detectsleep -time 5 -locker "/usr/local/bin/lock"   -notify 30   -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
+exec xautolock -detectsleep -time 10 -locker "/usr/local/bin/lock"   -notify 30   -notifier "notify-send -i computer -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
 
 #### Custom End ####
 
@@ -166,4 +167,5 @@ mode "resize" {
 bar {
         #status_command i3status
         status_command easyi3status
+		font pango:Monospace Sans Mono, Icons 10
 }
